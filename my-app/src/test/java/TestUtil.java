@@ -22,4 +22,11 @@ public class TestUtil {
 	
 	}
 	
+	@Test
+	public void argsLengthIsEven(){
+		int[] args = {0,0};
+		assertEquals(false, c.compute(args));
+	
+	}
+	
 }
