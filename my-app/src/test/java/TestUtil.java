@@ -2,7 +2,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,5 +27,11 @@ public class TestUtil {
 		assertEquals(false, c.compute(args));
 	
 	}
+		
+	@Test(expected = RuntimeException.class)
+	public void testException() throws Exception{
+		int[] args = {0,0,0};
+		c.compute(args);
 	
+	}
 }
