@@ -22,4 +22,13 @@ public class TestCompute {
 		when(mq.size()).thenReturn(0);
 		assertEquals(-1, c.countNumberOfOccurrences("test string"));
 	}
+	
+	@Test
+	public void mqContains(){
+		MessageQueue mq = mock(MessageQueue.class);
+		c = new Compute(mq);
+		when(mq.size()).thenReturn(1);
+		when(mq.contains(anyString())).thenReturn(false);
+		assertEquals(0, c.countNumberOfOccurrences("test string"));
+	}
 }
