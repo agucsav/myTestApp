@@ -34,4 +34,13 @@ public class TestUtil {
 		c.compute(args);
 	
 	}
+	
+		
+	@Test
+	public void testTrue(){
+		int[] args = {2,6,4};
+		assertEquals(true, c.compute(args));
+	
+	}
+	
 }
