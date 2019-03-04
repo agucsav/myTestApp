@@ -1,5 +1,6 @@
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import org.junit.Before;
@@ -13,4 +14,12 @@ public class TestUtil {
 
   @Test
   public void example() { assertTrue(true); }
+
+	@Test
+	public void argsLengthIsOne(){
+		int[] args = {0};
+		assertEquals(false, c.compute(args));
+	
+	}
+	
 }
