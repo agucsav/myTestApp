@@ -14,4 +14,12 @@ public class TestCompute {
     c = new Compute(mq);
     assertTrue(true);
   }
+  
+  @Test
+	public void sizeIsZero(){
+		MessageQueue mq = mock(MessageQueue.class);
+		c = new Compute(mq);
+		when(mq.size()).thenReturn(0);
+		assertEquals(-1, c.countNumberOfOccurrences("test string"));
+	}
 }
