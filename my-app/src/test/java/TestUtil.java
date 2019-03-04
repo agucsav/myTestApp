@@ -43,4 +43,10 @@ public class TestUtil {
 	
 	}
 	
+	@Test
+	public void testFalse(){
+		int[] args = {2,6,3};
+		assertEquals(false, c.compute(args));
+	
+	}
 }
